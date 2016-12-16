@@ -24,68 +24,69 @@ export default class SignupVriew extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image source={background} style={styles.bg} resizeMode="cover" />
-        <View style={styles.headerIconView}>
-          <TouchableOpacity style={styles.headerBackButtonView}>
-            <Image source={backIcon} style={styles.backButtonIcon} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.headerTitleView}>
-          <Text style={styles.titleViewText}>Sign Up</Text>
-        </View>
-        <View style={styles.inputs}>
-          <View style={styles.inputContainer}>
-            <View style={styles.imageContainer}>
-              <Image source={personIcon} style={styles.inputIcon} />
-            </View>
-            <TextInput
-              style={[styles.input, styles.whiteFont]}
-              placeholder="Name"
-              placeholderTextColor="#FFF"
-              underlineColorAndroid='transparent' />
-          </View>
-          <View style={styles.inputContainer}>
-            <View style={styles.imageContainer}>
-              <Image source={emailIcon} style={styles.inputIcon} />
-            </View>
-            <TextInput
-              style={[styles.input, styles.whiteFont]}
-              placeholder="Email"
-              placeholderTextColor="#FFF" />
-          </View>
-          <View style={styles.inputContainer}>
-            <View style={styles.imageContainer}>
-              <Image source={lockIcon} style={styles.inputIcon} />
-            </View>
-            <TextInput
-              secureTextEntry={true}
-              style={[styles.input, styles.whiteFont]}
-              placeholder="Password"
-              placeholderTextColor="#FFF" />
-          </View>
-          <View style={styles.inputContainer}>
-            <View style={styles.imageContainer}>
-              <Image source={birthdayIcon} style={styles.inputIcon} />
-            </View>
-            <TextInput
-              style={[styles.input, styles.whiteFont]}
-              placeholder="Birthday"
-              placeholderTextColor="#FFF"
-              underlineColorAndroid='transparent' />
-          </View>
-        </View>
-        <View style={styles.footerContainer}>
-          <View style={styles.signupView}>
-            <TouchableOpacity
-              style={styles.signup}>
-              <Text style={styles.signupText}>Join</Text>
+        <Image source={background} style={styles.bg} resizeMode="cover" >
+          <View style={styles.headerIconView}>
+            <TouchableOpacity style={styles.headerBackButtonView}>
+              <Image source={backIcon} style={styles.backButtonIcon} />
             </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            style={styles.signin}>
-            <Text style={styles.greyFont}>Already have an account?<Text style={styles.whiteFont}> Sign In</Text></Text>
-          </TouchableOpacity>
-        </View>
+          <View style={styles.headerTitleView}>
+            <Text style={styles.titleViewText}>Sign Up</Text>
+          </View>
+          <View style={styles.inputs}>
+            <View style={styles.inputContainer}>
+              <View style={styles.imageContainer}>
+                <Image source={personIcon} style={styles.inputIcon} />
+              </View>
+              <TextInput
+                style={[styles.input, styles.whiteFont]}
+                placeholder="Name"
+                placeholderTextColor="#FFF"
+                underlineColorAndroid='transparent' />
+            </View>
+            <View style={styles.inputContainer}>
+              <View style={styles.imageContainer}>
+                <Image source={emailIcon} style={styles.inputIcon} />
+              </View>
+              <TextInput
+                style={[styles.input, styles.whiteFont]}
+                placeholder="Email"
+                placeholderTextColor="#FFF" />
+            </View>
+            <View style={styles.inputContainer}>
+              <View style={styles.imageContainer}>
+                <Image source={lockIcon} style={styles.inputIcon} />
+              </View>
+              <TextInput
+                secureTextEntry={true}
+                style={[styles.input, styles.whiteFont]}
+                placeholder="Password"
+                placeholderTextColor="#FFF" />
+            </View>
+            <View style={styles.inputContainer}>
+              <View style={styles.imageContainer}>
+                <Image source={birthdayIcon} style={styles.inputIcon} />
+              </View>
+              <TextInput
+                style={[styles.input, styles.whiteFont]}
+                placeholder="Birthday"
+                placeholderTextColor="#FFF"
+                underlineColorAndroid='transparent' />
+            </View>
+          </View>
+          <View style={styles.footerContainer}>
+            <View style={styles.signupView}>
+              <TouchableOpacity
+                style={styles.signup}>
+                <Text style={styles.signupText}>Join</Text>
+              </TouchableOpacity>
+            </View>
+            <TouchableOpacity
+              style={styles.signin}>
+              <Text style={styles.greyFont}>Already have an account?<Text style={styles.whiteFont}> Sign In</Text></Text>
+            </TouchableOpacity>
+          </View>
+        </Image>
       </View>
     );
   }
@@ -93,19 +94,14 @@ export default class SignupVriew extends Component {
 
 let styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
     flex: 1,
-    backgroundColor: 'transparent'
   },
   bg: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
+    width,
+    height,
   },
   headerIconView: {
-    flex: .1,
+    flex: 1,
     backgroundColor: 'transparent'
   },
   headerBackButtonView: {
@@ -121,7 +117,7 @@ let styles = StyleSheet.create({
     height: 25
   },
   headerTitleView: {
-    flex: 0.1,
+    flex: 1,
     backgroundColor: 'transparent',
     paddingLeft: 25,
   },
@@ -140,10 +136,10 @@ let styles = StyleSheet.create({
   inputs: {
     paddingTop: 20,
     paddingBottom: 10,
-    flex: .40
+    flex: 4
   },
   footerContainer: {
-    flex: 0.15,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -163,7 +159,8 @@ let styles = StyleSheet.create({
   signin: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 0.05
+    flex: 1,
+    backgroundColor: 'transparent',
   },
   inputIcon: {
     width: 25,
@@ -177,17 +174,17 @@ let styles = StyleSheet.create({
     alignItems: 'center',
   },
   inputContainer: {
-      borderWidth: 1,
-      paddingBottom: 10,
-      borderBottomColor: '#CCC',
-      borderColor: 'transparent',
-      flexDirection: 'row'
+    borderWidth: 1,
+    paddingBottom: 10,
+    borderBottomColor: '#CCC',
+    borderColor: 'transparent',
+    flexDirection: 'row'
   },
   input: {
-      height: 50,
-      flex: 10,
-      paddingLeft: 20,
-      fontSize: 22,
+    height: 50,
+    flex: 10,
+    paddingLeft: 20,
+    fontSize: 22,
   },
   forgotContainer: {
     paddingTop:10,
