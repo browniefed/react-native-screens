@@ -7,12 +7,13 @@ import {
 } from 'react-native';
 
 import LoginScreen from "./screens/login/index";
+import SignupScreen from "./screens/signup/index";
 
 export default class screens extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <LoginScreen />
+        <SignupScreen />
       </View>
     );
   }
