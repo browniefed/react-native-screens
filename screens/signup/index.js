@@ -144,7 +144,7 @@ let styles = StyleSheet.create({
   },
   inputsContainer: {
     flex: 3,
-    marginVertical: 50,
+    marginTop: 50,
   },
   footerContainer: {
     flex: 1
